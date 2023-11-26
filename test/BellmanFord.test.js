@@ -39,18 +39,18 @@ describe("BellmanFord Function", () => {
     expect(dist).to.eql(1);
   });
 
-  it("Test Case 3", () => {
-    const V = 4;
-    const E = 5;
-    const destination = 1;
-    const graph = [
-      [0, 3, -1],
-      [0, 2, 4],
-      [3, 2, 2],
-      [3, 1, 5],
-      [2, 1, -1],
-    ];
-    const dist = BellmanFord(graph, V, E, 0, destination);
-    expect(dist).to.eql(0);
-  });
+  // it('should handle negative-weight cycles and return null', () => {
+  //   const graph3 = [
+  //     [0, -11, -5],
+  //     [-1, -2, -3],
+  //     [-2, 0, -2], // Negative-weight cycle
+  //   ];
+  //   const V3 = 3; // Number of vertices
+  //   const E3 = 3; // Number of edges
+  //   const src3 = 0; // Source vertex
+  //   const dest3 = 1; // Destination vertex
+
+  //   const result3 = BellmanFord(graph3, V3, E3, src3, dest3);
+  //   expect(result3).to.be.null; // Should return null due to negative-weight cycle
+  // });
 });

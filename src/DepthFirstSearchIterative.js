@@ -11,12 +11,6 @@ class GraphUnweightedUndirected {
 
   addEdge(node1, node2) {
     // Function to add an edge (adds the node too if they are not present in the graph)
-    if (!(node1 in this.connections)) {
-      this.addNode(node1);
-    }
-    if (!(node2 in this.connections)) {
-      this.addNode(node2);
-    }
     this.connections[node1].add(node2);
     this.connections[node2].add(node1);
   }

@@ -37,5 +37,8 @@ describe("BreadthFirstShortestPath", () => {
     ]);
     expect(breadthFirstShortestPath(graph, "F", "G")).to.eql(["F", "G"]);
     expect(breadthFirstShortestPath(graph, "A", "G")).to.eql([]);
+    expect(breadthFirstShortestPath(graph, "C", "C")).to.eql([
+      "C",
+    ]);
   });
 });
