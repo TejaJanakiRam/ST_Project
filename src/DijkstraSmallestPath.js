@@ -11,9 +11,6 @@ function solve(graph, s) {
     let dist = Infinity;
 
     for (const node in solutions) {
-      if (!solutions[node]) {
-        continue;
-      }
       const ndist = distances[node];
       const adj = graph[node];
 
@@ -44,7 +41,6 @@ function solve(graph, s) {
 
   return { solutions, distances };
 }
-
 
 // const graph = {
 //   A: { B: 4, C: 2 },

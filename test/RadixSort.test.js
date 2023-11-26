@@ -19,4 +19,10 @@ describe("Radix Sort", () => {
     const res = radixSort(arr, 10);
     expect(res).to.eql([10, 12, 14, 16]);
   });
+
+  it("should handle when RADIX<1", () => {
+    const arr = [1, 2];
+    const res = radixSort(arr, 0);
+    expect(res).to.eql([1, 2]);
+  });
 });

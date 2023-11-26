@@ -38,7 +38,7 @@ class Queue {
    */
   dequeue() {
     if (this.isEmpty()) {
-      throw new Error("Queue is Empty");
+      throw new Error("Empty");
     }
 
     const firstData = this.peekFirst();
@@ -60,7 +60,7 @@ class Queue {
    */
   peekFirst() {
     if (this.isEmpty()) {
-      throw new Error("Queue is Empty");
+      throw new Error("Empty");
     }
 
     return this.head.data;
@@ -72,7 +72,7 @@ class Queue {
    */
   peekLast() {
     if (this.isEmpty()) {
-      throw new Error("Queue is Empty");
+      throw new Error("Empty");
     }
 
     return this.tail.data;

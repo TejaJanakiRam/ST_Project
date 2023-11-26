@@ -2,3 +2,4 @@ node_modules
 reports/mutation/mutation.html
 
 reports/mutation/mutation.html
+stryker.log

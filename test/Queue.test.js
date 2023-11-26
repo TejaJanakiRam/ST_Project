@@ -34,14 +34,16 @@ describe("Testing the Queue DS", () => {
   });
 
   it("Testing isEmpty method", () => {
-    const queue = new Queue();
-    expect(queue.isEmpty()).to.equal(true);
+    const q = new Queue();
+    expect(q.isEmpty()).to.equal(true);
+    expect(q.dequeue.bind(q)).to.throw("Empty");
+    expect(q.peekFirst.bind(q)).to.throw("Empty");
+    expect(q.peekLast.bind(q)).to.throw("Empty");
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(8);
+    q.enqueue(9);
 
-    queue.enqueue(1);
-    queue.enqueue(2);
-    queue.enqueue(8);
-    queue.enqueue(9);
-
-    expect(queue.isEmpty()).to.equal(false);
+    expect(q.isEmpty()).to.equal(false);
   });
 });
