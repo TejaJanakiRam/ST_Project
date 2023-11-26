@@ -45,11 +45,12 @@ function solve(graph, s) {
   return { solutions, distances };
 }
 
-const graph = {
-  A: { B: 4, C: 2 },
-  B: { A: 4, C: 5, D: 10 },
-  C: { A: 2, B: 5, D: 3 },
-  D: { B: 10, C: 3 },
-};
-console.log(solve(graph, "A"));
+
+// const graph = {
+//   A: { B: 4, C: 2 },
+//   B: { A: 4, C: 5, D: 10 },
+//   C: { A: 2, B: 5, D: 3 },
+//   D: { B: 10, C: 3 },
+// };
+// console.log(solve(graph, "A"));
 export { solve };
