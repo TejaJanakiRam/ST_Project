@@ -37,6 +37,7 @@ function BellmanFord(graph, V, E, src, dest) {
   for (let i = 0; i < V; i++) {
     if (i === dest) return dis[i];
   }
+  return Infinity;
 }
 // const graph = [
 //   [0, 1, 5],
