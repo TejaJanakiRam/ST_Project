@@ -57,5 +57,5 @@ describe("GraphUnweightedUndirected", () => {
     expect(found).to.equal(false); // Expecting not to find any node in an empty graph
   });
 
-  // Code author didn't account for empty graphs without any nodes
+  // Code author didn't account for empty graphs without any node
 });
