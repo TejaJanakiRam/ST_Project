@@ -1,47 +1,55 @@
-// starting at s
 function solve(graph, s) {
-  const solutions = {}
-  solutions[s] = []
-  solutions[s].dist = 0
+  const solutions = {};
+  const distances = {};
+
+  solutions[s] = [s];
+  distances[s] = 0;
 
   while (true) {
-    let p = null
-    let neighbor = null
-    let dist = Infinity
+    let p = null;
+    let neighbor = null;
+    let dist = Infinity;
 
-    for (const n in solutions) {
-      if (!solutions[n]) {
-        continue
+    for (const node in solutions) {
+      if (!solutions[node]) {
+        continue;
       }
-      const ndist = solutions[n].dist
-      const adj = graph[n]
+      const ndist = distances[node];
+      const adj = graph[node];
 
       for (const a in adj) {
         if (solutions[a]) {
-          continue
+          continue;
         }
 
-        const d = adj[a] + ndist
+        const d = adj[a] + ndist;
         if (d < dist) {
-          p = solutions[n]
-          neighbor = a
-          dist = d
+          p = solutions[node];
+          neighbor = a;
+          dist = d;
         }
       }
     }
 
     // no more solutions
     if (dist === Infinity) {
-      break
+      break;
     }
 
     // extend parent's solution path
-    solutions[neighbor] = p.concat(neighbor)
-    // extend parent's cost
-    solutions[neighbor].dist = dist
+    solutions[neighbor] = p.concat(neighbor);
+    // store distance for the neighbor
+    distances[neighbor] = dist;
   }
 
-  return solutions
+  return { solutions, distances };
 }
 
-export { solve }
+const graph = {
+  A: { B: 4, C: 2 },
+  B: { A: 4, C: 5, D: 10 },
+  C: { A: 2, B: 5, D: 3 },
+  D: { B: 10, C: 3 },
+};
+console.log(solve(graph, "A"));
+export { solve };
