@@ -1,19 +1,3 @@
-/*
-The Bellman–Ford algorithm is an algorithm that computes shortest paths
-from a single source vertex to all of the other vertices in a weighted digraph.
-It also detects negative weight cycle.
-
-Complexity:
-    Worst-case performance O(VE)
-    Best-case performance O(E)
-    Worst-case space complexity O(V)
-
-Reference:
-    https://en.wikipedia.org/wiki/Bellman–Ford_algorithm
-    https://cp-algorithms.com/graph/bellman_ford.html
-
-*/
-
 /**
  *
  * @param graph Graph in the format (u, v, w) where

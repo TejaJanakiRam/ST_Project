@@ -1,24 +1,16 @@
-/* Queue
- * A Queue is a data structure that allows you to add an element to the end of
- * a list and remove the item at the front. A queue follows a FIFO (First In First Out)
- * system, where the first item to enter the queue is the first to be removed,
- * All these operation complexities are O(1).
- * This implementation following the linked list structure.
- */
-
 class Queue {
-  #size
+  #size;
 
   constructor() {
-    this.head = null
-    this.tail = null
-    this.#size = 0
+    this.head = null;
+    this.tail = null;
+    this.#size = 0;
 
-    return Object.seal(this)
+    return Object.seal(this);
   }
 
   get length() {
-    return this.#size
+    return this.#size;
   }
 
   /**
@@ -27,17 +19,17 @@ class Queue {
    * @returns {number} - The current size of queue
    */
   enqueue(data) {
-    const node = { data, next: null }
+    const node = { data, next: null };
 
     if (!this.head && !this.tail) {
-      this.head = node
-      this.tail = node
+      this.head = node;
+      this.tail = node;
     } else {
-      this.tail.next = node
-      this.tail = node
+      this.tail.next = node;
+      this.tail = node;
     }
 
-    return ++this.#size
+    return ++this.#size;
   }
 
   /**
@@ -46,20 +38,20 @@ class Queue {
    */
   dequeue() {
     if (this.isEmpty()) {
-      throw new Error('Queue is Empty')
+      throw new Error("Queue is Empty");
     }
 
-    const firstData = this.peekFirst()
+    const firstData = this.peekFirst();
 
-    this.head = this.head.next
+    this.head = this.head.next;
 
     if (!this.head) {
-      this.tail = null
+      this.tail = null;
     }
 
-    this.#size--
+    this.#size--;
 
-    return firstData
+    return firstData;
   }
 
   /**
@@ -68,10 +60,10 @@ class Queue {
    */
   peekFirst() {
     if (this.isEmpty()) {
-      throw new Error('Queue is Empty')
+      throw new Error("Queue is Empty");
     }
 
-    return this.head.data
+    return this.head.data;
   }
 
   /**
@@ -80,10 +72,10 @@ class Queue {
    */
   peekLast() {
     if (this.isEmpty()) {
-      throw new Error('Queue is Empty')
+      throw new Error("Queue is Empty");
     }
 
-    return this.tail.data
+    return this.tail.data;
   }
 
   /**
@@ -91,15 +83,15 @@ class Queue {
    * @returns {Array<*>}
    */
   toArray() {
-    const array = []
-    let node = this.head
+    const array = [];
+    let node = this.head;
 
     while (node) {
-      array.push(node.data)
-      node = node.next
+      array.push(node.data);
+      node = node.next;
     }
 
-    return array
+    return array;
   }
 
   /**
@@ -107,8 +99,8 @@ class Queue {
    * @returns {boolean}
    */
   isEmpty() {
-    return this.length === 0
+    return this.length === 0;
   }
 }
 
-export default Queue
+export default Queue;
