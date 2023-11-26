@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { kosaraju } from "../src/Kosaraju";
+import { kosaraju } from "../src/Kosaraju.js";
 
 describe("Kosaraju Function", () => {
   it("Test Case 1", () => {

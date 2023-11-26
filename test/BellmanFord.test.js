@@ -17,7 +17,7 @@ describe("BellmanFord Function", () => {
       [4, 3, -3],
     ];
     const dist = BellmanFord(graph, V, E, 0, destination);
-    expect(dist).to.equal(-2);
+    expect(dist).to.eql(-2);
   });
 
   it("Test Case 2", () => {
@@ -36,7 +36,7 @@ describe("BellmanFord Function", () => {
       [5, 4, 2],
     ];
     const dist = BellmanFord(graph, V, E, 0, destination);
-    expect(dist).to.equal(1);
+    expect(dist).to.eql(1);
   });
 
   it("Test Case 3", () => {
@@ -51,6 +51,6 @@ describe("BellmanFord Function", () => {
       [2, 1, -1],
     ];
     const dist = BellmanFord(graph, V, E, 0, destination);
-    expect(dist).to.equal(0);
+    expect(dist).to.eql(0);
   });
 });

@@ -1,4 +1,4 @@
-import { breadthFirstSearch } from "../src/BreadthFirstSearch";
+import { breadthFirstSearch } from "../src/BreadthFirstSearch.js";
 import { expect } from "chai";
 
 describe("BreadthFirstSearch", () => {
@@ -11,30 +11,21 @@ describe("BreadthFirstSearch", () => {
     F: ["G"],
     G: [],
   };
-  /*
-        A <-> B
-        ʌ     |
-        |     |
-        v     v
-  C --> D <-- E
-
-  F --> G
-  */
 
   it("should return the visited nodes", () => {
-    expect(Array.from(breadthFirstSearch(graph, "C"))).toEqual([
+    expect(Array.from(breadthFirstSearch(graph, "C"))).to.eql([
       "C",
       "D",
       "A",
       "B",
       "E",
     ]);
-    expect(Array.from(breadthFirstSearch(graph, "A"))).toEqual([
+    expect(Array.from(breadthFirstSearch(graph, "A"))).to.eql([
       "A",
       "B",
       "D",
       "E",
     ]);
-    expect(Array.from(breadthFirstSearch(graph, "F"))).toEqual(["F", "G"]);
+    expect(Array.from(breadthFirstSearch(graph, "F"))).to.eql(["F", "G"]);
   });
 });

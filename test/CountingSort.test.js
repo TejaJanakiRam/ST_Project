@@ -1,4 +1,4 @@
-import { countingSort } from "../src/CountingSort";
+import { countingSort } from "../src/CountingSort.js";
 import { expect } from "chai";
 
 describe("countingSort Function", () => {

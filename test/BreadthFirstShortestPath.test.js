@@ -1,4 +1,4 @@
-import { breadthFirstShortestPath } from "../src/BreadthFirstShortestPath";
+import { breadthFirstShortestPath } from "../src/BreadthFirstShortestPath.js";
 import { expect } from "chai";
 
 describe("BreadthFirstShortestPath", () => {
@@ -22,20 +22,20 @@ describe("BreadthFirstShortestPath", () => {
   */
 
   it("should return the visited nodes", () => {
-    expect(breadthFirstShortestPath(graph, "C", "E")).toEqual([
+    expect(breadthFirstShortestPath(graph, "C", "E")).to.eql([
       "C",
       "D",
       "A",
       "B",
       "E",
     ]);
-    expect(breadthFirstShortestPath(graph, "E", "B")).toEqual([
+    expect(breadthFirstShortestPath(graph, "E", "B")).to.eql([
       "E",
       "D",
       "A",
       "B",
     ]);
-    expect(breadthFirstShortestPath(graph, "F", "G")).toEqual(["F", "G"]);
-    expect(breadthFirstShortestPath(graph, "A", "G")).toEqual([]);
+    expect(breadthFirstShortestPath(graph, "F", "G")).to.eql(["F", "G"]);
+    expect(breadthFirstShortestPath(graph, "A", "G")).to.eql([]);
   });
 });

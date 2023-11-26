@@ -1,4 +1,4 @@
-import Queue from "Queue";
+import Queue from "./Queue.js";
 
 /**
  * Breadth-first search is an algorithm for traversing a graph.

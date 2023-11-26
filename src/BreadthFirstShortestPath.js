@@ -1,4 +1,4 @@
-import Queue from "Queue";
+import Queue from "./Queue.js";
 /**
  * Breadth-first approach can be applied to determine the shortest path between two nodes in an equi-weighted graph.
  *
