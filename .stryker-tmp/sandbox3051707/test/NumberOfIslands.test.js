@@ -1,34 +1,32 @@
+// @ts-nocheck
 import { islands } from '../NumberOfIslands'
-import { expect } from "chai";
-
 
 describe('Number of Islands', () => {
-  it('should count three islands in the graph', () => {
+  test('Graph with three islands', () => {
     const graph = [
       ['1', '1', '0', '0', '0'],
       ['1', '1', '0', '0', '0'],
       ['0', '0', '1', '0', '0'],
       ['0', '0', '0', '1', '1']
-    ];
-    expect(islands(graph)).to.equal(3);
-  });
+    ]
+    expect(islands(graph)).toBe(3)
+  })
 
-  it('should count one island in the graph', () => {
+  test('Graph with only one island', () => {
     const graph = [
       ['1', '1'],
       ['1', '1'],
       ['0', '0'],
       ['0', '0']
-    ];
-    expect(islands(graph)).to.equal(1);
-  });
+    ]
+    expect(islands(graph)).toBe(1)
+  })
 
-  it('should count zero islands in the graph', () => {
+  test('No islands', () => {
     const graph = [
       ['0', '0'],
       ['0', '0']
-    ];
-    expect(islands(graph)).to.equal(0);
-  });
-});
-
+    ]
+    expect(islands(graph)).toBe(0)
+  })
+})

@@ -1,19 +1,23 @@
-import { radixSort } from '../RadixSort'
+import { radixSort } from '../src/RadixSort'
+import { expect } from "chai";
 
-test('The RadixSort of the array [4, 3, 2, 1] is [1, 2, 3, 4]', () => {
-  const arr = [4, 3, 2, 1]
-  const res = radixSort(arr, 10)
-  expect(res).toEqual([1, 2, 3, 4])
-})
+describe('Radix Sort', () => {
+  it('should sort the array [4, 3, 2, 1] to [1, 2, 3, 4]', () => {
+    const arr = [4, 3, 2, 1];
+    const res = radixSort(arr, 10);
+    expect(res).to.eql([1, 2, 3, 4]);
+  });
 
-test('The RadixSort of the array [] is []', () => {
-  const arr = []
-  const res = radixSort(arr, 10)
-  expect(res).toEqual([])
-})
+  it('should handle an empty array and return []', () => {
+    const arr = [];
+    const res = radixSort(arr, 10);
+    expect(res).to.eql([]);
+  });
 
-test('The RadixSort of the array [14, 16, 10, 12] is [10, 12, 14, 16]', () => {
-  const arr = [14, 16, 10, 12]
-  const res = radixSort(arr, 10)
-  expect(res).toEqual([10, 12, 14, 16])
-})
+  it('should sort the array [14, 16, 10, 12] to [10, 12, 14, 16]', () => {
+    const arr = [14, 16, 10, 12];
+    const res = radixSort(arr, 10);
+    expect(res).to.eql([10, 12, 14, 16]);
+  });
+});
+

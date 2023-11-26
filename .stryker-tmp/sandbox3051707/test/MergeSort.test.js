@@ -1,5 +1,5 @@
-import { merge, mergeSort } from '../src/MergeSort'
-import { expect } from "chai";
+// @ts-nocheck
+import { merge, mergeSort } from '../MergeSort'
 
 describe('merge', () => {
   it('should merge arrays correctly', () => {

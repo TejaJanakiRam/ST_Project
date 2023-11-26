@@ -1,5 +1,5 @@
-import { selectionSort } from '../src/SelectionSort'
-import { expect } from "chai";
+// @ts-nocheck
+import { selectionSort } from '../SelectionSort'
 
 describe('selectionSort', () => {
   it('expects to return the array sorted in ascending order', () => {

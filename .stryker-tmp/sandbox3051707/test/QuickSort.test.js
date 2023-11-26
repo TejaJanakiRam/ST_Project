@@ -1,5 +1,5 @@
-import { quickSort } from '../src/QuickSort'
-import { expect } from "chai";
+// @ts-nocheck
+import { quickSort } from '../QuickSort'
 
 describe('QuickSort', () => {
   it('should work for empty arrays', () => {

@@ -1,5 +1,5 @@
-import Queue from '../src/Queue'
-import { expect } from "chai";
+// @ts-nocheck
+import Queue from '../Queue'
 
 describe('Testing the Queue DS', () => {
   const queue = new Queue()

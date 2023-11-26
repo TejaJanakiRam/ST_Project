@@ -1,27 +1,29 @@
-import { simplifiedWiggleSort } from '../SimplifiedWiggleSort.js'
+import { expect } from "chai";
+import {simplifiedWiggleSort} from '../src/SimplifiedWiggleSort'
 
 describe('simplified wiggle sort', () => {
-  test('simplified wiggle sort for chars', () => {
-    const src = ['a', 'b', 'c']
-    expect(simplifiedWiggleSort(src)).toEqual(['a', 'c', 'b'])
-  })
+  it('simplified wiggle sort for chars', () => {
+    const src = ['a', 'b', 'c'];
+    expect(simplifiedWiggleSort(src)).to.eql(['a', 'c', 'b']);
+  });
 
-  test('wiggle sort with duplicates, even array', () => {
-    const src = [2, 2, 1, 3]
-    expect(simplifiedWiggleSort(src)).toEqual([1, 3, 2, 2])
-  })
+  it('wiggle sort with duplicates, even array', () => {
+    const src = [2, 2, 1, 3];
+    expect(simplifiedWiggleSort(src)).to.eql([1, 3, 2, 2]);
+  });
 
-  test('wiggle sort with duplicates, odd array', () => {
-    const src = [1, 1, 1, 2, 4]
-    expect(simplifiedWiggleSort(src)).toEqual([1, 4, 1, 2, 1])
-  })
+  it('wiggle sort with duplicates, odd array', () => {
+    const src = [1, 1, 1, 2, 4];
+    expect(simplifiedWiggleSort(src)).to.eql([1, 4, 1, 2, 1]);
+  });
 
-  test(
+  it(
     'simplified wiggle sort which leads to equal values next to ' +
       'each other',
     () => {
-      const src = [3, 3, 5, 1]
-      expect(simplifiedWiggleSort(src)).toEqual([1, 5, 3, 3])
+      const src = [3, 3, 5, 1];
+      expect(simplifiedWiggleSort(src)).to.eql([1, 5, 3, 3]);
     }
-  )
-})
+  );
+});
+

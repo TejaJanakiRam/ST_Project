@@ -1,5 +1,5 @@
-import { quickSort } from '../src/QuickSortRecursive'
-import { expect } from "chai";
+// @ts-nocheck
+import { quickSort } from '../QuickSortRecursive'
 
 describe('QuickSortRecursive | Partition In Place Method', () => {
   it('Expectedly, throw some error if we pass a non-array input', () => {
