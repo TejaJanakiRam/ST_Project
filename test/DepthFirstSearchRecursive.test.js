@@ -20,8 +20,8 @@ describe("GraphUnweightedUndirected", () => {
   });
 
   it("should add edges correctly", () => {
-    graph.addNode("A");
-    graph.addNode("B");
+    // graph.addNode("A");
+    // graph.addNode("B");
     graph.addEdge("A", "B");
 
     expect(graph.connections["A"]).to.have.keys("B");
